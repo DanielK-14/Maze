@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Volumes/My Drive/לימודים/GitHub/MazeProject/Maze.cpp
+Maze.h
+/Volumes/My Drive/לימודים/GitHub/MazeProject/Maze.h
+
+/Volumes/My Drive/לימודים/GitHub/MazeProject/Maze.h
+iostream
+-
+string.h
+-
+
+/Volumes/My Drive/לימודים/GitHub/MazeProject/main.cpp
+iostream
+-
+

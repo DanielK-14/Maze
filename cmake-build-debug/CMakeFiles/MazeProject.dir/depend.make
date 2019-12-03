@@ -4,5 +4,6 @@
 CMakeFiles/MazeProject.dir/Maze.cpp.o: ../Maze.cpp
 CMakeFiles/MazeProject.dir/Maze.cpp.o: ../Maze.h
 
+CMakeFiles/MazeProject.dir/main.cpp.o: ../Maze.h
 CMakeFiles/MazeProject.dir/main.cpp.o: ../main.cpp
 

@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-    cout << "Hello, World!" << std::endl;
+    cout << "Hello, World!" << endl;
 
     Maze maze = Maze(11,11);
     maze.MakeCleanMaze();

@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/MazeProject.dir/Maze.cpp.o"
+  "CMakeFiles/MazeProject.dir/Queue.cpp.o"
   "CMakeFiles/MazeProject.dir/main.cpp.o"
   "MazeProject"
   "MazeProject.pdb"

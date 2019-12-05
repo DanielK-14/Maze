@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Volumes/My Drive/לימודים/GitHub/MazeProject/Maze.cpp" "/Volumes/My Drive/לימודים/GitHub/MazeProject/cmake-build-debug/CMakeFiles/MazeProject.dir/Maze.cpp.o"
+  "/Volumes/My Drive/לימודים/GitHub/MazeProject/Queue.cpp" "/Volumes/My Drive/לימודים/GitHub/MazeProject/cmake-build-debug/CMakeFiles/MazeProject.dir/Queue.cpp.o"
   "/Volumes/My Drive/לימודים/GitHub/MazeProject/main.cpp" "/Volumes/My Drive/לימודים/GitHub/MazeProject/cmake-build-debug/CMakeFiles/MazeProject.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")

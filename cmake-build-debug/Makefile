@@ -150,6 +150,33 @@ Maze.cpp.s:
 	$(MAKE) -f CMakeFiles/MazeProject.dir/build.make CMakeFiles/MazeProject.dir/Maze.cpp.s
 .PHONY : Maze.cpp.s
 
+Queue.o: Queue.cpp.o
+
+.PHONY : Queue.o
+
+# target to build an object file
+Queue.cpp.o:
+	$(MAKE) -f CMakeFiles/MazeProject.dir/build.make CMakeFiles/MazeProject.dir/Queue.cpp.o
+.PHONY : Queue.cpp.o
+
+Queue.i: Queue.cpp.i
+
+.PHONY : Queue.i
+
+# target to preprocess a source file
+Queue.cpp.i:
+	$(MAKE) -f CMakeFiles/MazeProject.dir/build.make CMakeFiles/MazeProject.dir/Queue.cpp.i
+.PHONY : Queue.cpp.i
+
+Queue.s: Queue.cpp.s
+
+.PHONY : Queue.s
+
+# target to generate assembly for a file
+Queue.cpp.s:
+	$(MAKE) -f CMakeFiles/MazeProject.dir/build.make CMakeFiles/MazeProject.dir/Queue.cpp.s
+.PHONY : Queue.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -189,6 +216,9 @@ help:
 	@echo "... Maze.o"
 	@echo "... Maze.i"
 	@echo "... Maze.s"
+	@echo "... Queue.o"
+	@echo "... Queue.i"
+	@echo "... Queue.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

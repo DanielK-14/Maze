@@ -1,11 +1,10 @@
 #pragma once
 
-typedef	int Type;
+#include "Point.h"
 class Node {
 
-public:	
-
-	Type data;
+public:
+    Point data;
 	Node *next;
 
 	Node() {
@@ -13,13 +12,11 @@ public:
 		next = nullptr;
 	}
 
-	Node(Type item, Node *ptr = nullptr) {
+	Node(Point p, Node *ptr = nullptr) {
 		
-		data = item;
+		data = p;
 		next = ptr;
 	}
-
-	~Node();
 
 	void InsertAfter(Node *newNode) {
 		

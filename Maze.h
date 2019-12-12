@@ -7,6 +7,8 @@
 
 #include <iostream>
 #include <string.h>
+#include "Point.h"
+
 using namespace std;
 
 const int MAX_ROWS = 25;
@@ -26,6 +28,10 @@ public:
 
     void MakeCleanMaze();
     void Show();
+    void MakeMaze();
+    Point* getPosibleMoves(const Point& p,int* movesAmount);
+    void RemoveWalls(const Point& loc, const Point& dest);
+    void CleanDollars();
 };
 
 

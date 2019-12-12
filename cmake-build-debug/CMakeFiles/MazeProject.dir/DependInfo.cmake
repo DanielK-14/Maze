@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Volumes/My Drive/לימודים/GitHub/MazeProject/Maze.cpp" "/Volumes/My Drive/לימודים/GitHub/MazeProject/cmake-build-debug/CMakeFiles/MazeProject.dir/Maze.cpp.o"
   "/Volumes/My Drive/לימודים/GitHub/MazeProject/Queue.cpp" "/Volumes/My Drive/לימודים/GitHub/MazeProject/cmake-build-debug/CMakeFiles/MazeProject.dir/Queue.cpp.o"
+  "/Volumes/My Drive/לימודים/GitHub/MazeProject/Stack.cpp" "/Volumes/My Drive/לימודים/GitHub/MazeProject/cmake-build-debug/CMakeFiles/MazeProject.dir/Stack.cpp.o"
   "/Volumes/My Drive/לימודים/GitHub/MazeProject/main.cpp" "/Volumes/My Drive/לימודים/GitHub/MazeProject/cmake-build-debug/CMakeFiles/MazeProject.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")

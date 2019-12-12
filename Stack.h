@@ -1,10 +1,13 @@
-#pragma once
+#ifndef MAZEPROJECT_STACK_H
+#define MAZEPROJECT_STACK_H
+
 #include "Node.h"
 #include <iostream>
+#include "Point.h"
 
 using namespace std;
 
-typedef int Type;
+class Point;
 
 class Stack {
 
@@ -12,35 +15,47 @@ private:
 	Node* top;
 
 public:
-	Stack() {
-
+	Stack()
+	{
 		top = nullptr;
 	}
 	
-	~Stack() {
-
+	~Stack()
+	{
 		MakeEmpty();
 	}
 	
 	void MakeEmpty();
 	
-	int IsEmpty() {
+	int IsEmpty()
+	{
 		return top == nullptr;
 	}
 	
-	void Push(Type item) {
-		top = new Node(item);
+	void Push(Point p)
+	{
+	    if(top == nullptr)
+		    top = new Node(p);
+        else
+        {
+            Node* temp = new Node(p,top);
+            top = temp;
+        }
 	}
 	
-	Type Pop() {
-		if (IsEmpty()) {
+	Point Pop()
+	{
+		if (IsEmpty())
+		{
 			std::cout << "ERROR: STACK UNDERFLOW\n";
 		}
 
 		Node* temp = top;
-		Type item = top->data;
+        Point p = top->data;
 		top = top->next;
 		delete temp;
-		return item;
+		return p;
 	}
 };
+
+#endif //MAZEPROJECT_STACK_H

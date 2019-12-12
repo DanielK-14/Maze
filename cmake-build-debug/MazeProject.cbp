@@ -84,10 +84,19 @@
 		<Unit filename="/Volumes/My Drive/לימודים/GitHub/MazeProject/Maze.h">
 			<Option target="MazeProject"/>
 		</Unit>
+		<Unit filename="/Volumes/My Drive/לימודים/GitHub/MazeProject/Point.h">
+			<Option target="MazeProject"/>
+		</Unit>
 		<Unit filename="/Volumes/My Drive/לימודים/GitHub/MazeProject/Queue.cpp">
 			<Option target="MazeProject"/>
 		</Unit>
 		<Unit filename="/Volumes/My Drive/לימודים/GitHub/MazeProject/Queue.h">
+			<Option target="MazeProject"/>
+		</Unit>
+		<Unit filename="/Volumes/My Drive/לימודים/GitHub/MazeProject/Stack.cpp">
+			<Option target="MazeProject"/>
+		</Unit>
+		<Unit filename="/Volumes/My Drive/לימודים/GitHub/MazeProject/Stack.h">
 			<Option target="MazeProject"/>
 		</Unit>
 		<Unit filename="/Volumes/My Drive/לימודים/GitHub/MazeProject/main.cpp">

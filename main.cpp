@@ -5,10 +5,13 @@ using namespace std;
 
 int main()
 {
-    cout << "Hello, World!" << endl;
-
-    Maze maze = Maze(11,11);
+    Maze maze = Maze(15,15);
     maze.MakeCleanMaze();
+    maze.Show();
+
+    cout << "\n\n" ;
+
+    maze.MakeMaze();
     maze.Show();
 
     return 0;

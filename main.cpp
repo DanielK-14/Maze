@@ -11,6 +11,7 @@ int main()
 
     cout << "\n\n" ;
 
+    srand (time(nullptr));
     maze.MakeMaze();
     maze.Show();
 

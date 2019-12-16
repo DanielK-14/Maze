@@ -7,7 +7,7 @@ Queue::Queue(int size)  ///Size by user
     data = new char[size + 1];
 }
 
-Queue::Queue() ///Default size with out user input
+Queue::Queue()  ///Default size with out user input
 {
     head = 1;
     tail = 0;

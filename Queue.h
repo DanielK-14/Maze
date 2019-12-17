@@ -2,17 +2,17 @@
 #define MAZEPROJECT_QUEUE_H
 
 #include <iostream>
+#include "Node.h"
 using namespace std;
 
 const int MAX_SIZE = 100;
-typedef char Type;
 
 class Queue
 {
 private:
     int head;
     int tail;
-    Type* data;
+    Node * data;
     static int AddOne(int x);
 
 public:
@@ -21,9 +21,9 @@ public:
     ~Queue();
     void MakeEmpty();
     int IsEmpty();
-    Type Front();
-    void EnQueue(Type item);
-    Type DeQueue();
+    Node * Front();
+    void EnQueue(Node * item);
+    Node * DeQueue();
 };
 
 

@@ -9,10 +9,10 @@ public:
 
 	Node() {
 		
-		next = nullptr;
+		next = NULL;
 	}
 
-	Node(Point p, Node *ptr = nullptr) {
+	Node(Point p, Node *ptr = NULL) {
 		
 		data = p;
 		next = ptr;
@@ -28,8 +28,8 @@ public:
 		
 		Node *temp = next;
 
-		if (next == nullptr) {
-			return nullptr;
+		if (next == NULL) {
+			return NULL;
 		}
 
 		next = temp->next;

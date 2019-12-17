@@ -8,6 +8,7 @@
 #include <iostream>
 #include <string.h>
 #include "Point.h"
+#include <vector> 
 
 using namespace std;
 
@@ -32,6 +33,21 @@ public:
     Point* getPosibleMoves(const Point& p,int* movesAmount);
     void RemoveWalls(const Point& loc, const Point& dest);
     void CleanDollars();
+
+	// returns maze char by points coordinats
+	char GetMazeCharByPoint(Point coordPoint) { return maze[coordPoint.col][coordPoint.row]; }
+	
+	// sets maze char by points coordinats 
+	void SetMazeCharByPoint(Point coordPoint, char charToSet) { maze[coordPoint.col][coordPoint.row] = charToSet; }
+	
+	// returns mazes' number of columns
+	int GetMazeCols() { return cols; }
+	
+	// returns mazes' number of rows
+	int GetMazeRows() { return rows; }
+
+	// returns a vector of possible paths in a made maze
+	vector<Point> GetPossibleMoves(const Point&);
 };
 
 

@@ -54,7 +54,7 @@ void Maze::MakeMaze()
         Point p = stack.Pop();
         int movesAmount = 0;
         Point* moves = getPosibleMoves(p,&movesAmount);
-        if(moves != nullptr)
+        if(moves != NULL)
         {
             int rand_move = rand() % movesAmount+1;
             RemoveWalls(p,moves[rand_move-1]);
@@ -93,7 +93,7 @@ Point* Maze::getPosibleMoves(const Point& point,int* movesAmount)
     if(*movesAmount < 4)
     {
         if(*movesAmount == 0)
-            return nullptr;
+            return NULL;
         Point* movesNew = new Point[*movesAmount];
         for (int i = 0; i < *movesAmount; i++)
         {
@@ -103,6 +103,30 @@ Point* Maze::getPosibleMoves(const Point& point,int* movesAmount)
         return movesNew;
     }
     return moves;
+}
+
+vector<Point> Maze::GetPossibleMoves(const Point& point) {
+
+	vector<Point> moves;
+ 
+	if (point.col + 1 <= cols - 1 && maze[point.col + 1][point.row] == ' ')   ///Right
+	{
+		moves.push_back(Point(point.row, point.col + 1));
+	}
+	if (point.row + 1 <= rows - 1 && maze[point.col][point.row + 1] == ' ')   ///Down
+	{
+		moves.push_back(Point(point.row + 1, point.col));
+	}
+	if (point.col - 1 >= 1 && maze[point.col - 1][point.row] == ' ')   ///Left
+	{
+		moves.push_back(Point(point.row, point.col - 1));
+	}
+	if (point.row - 1 >= 1 && maze[point.col][point.row - 1] == ' ')   ///Up
+	{
+		moves.push_back(Point(point.row - 1, point.col));
+	}
+	
+	return moves;
 }
 
 void Maze::RemoveWalls(const Point& loc, const Point& dest)

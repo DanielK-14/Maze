@@ -4,7 +4,7 @@ void Stack::MakeEmpty() {
 
 	Node *temp;
 
-	while (top != nullptr) {
+	while (top != NULL) {
 		temp = top;
 		top = top->next;
 		delete temp;

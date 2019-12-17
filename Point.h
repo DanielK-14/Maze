@@ -22,6 +22,16 @@ public:
         cout << "(" << col << "," << row << ")";
     }
 
+	bool operator!= (const Point &pointToCompareTo)
+	{
+		return !(this->col == pointToCompareTo.col && this->row == pointToCompareTo.row);
+	}
+
+	bool operator== (const Point &pointToCompareTo)
+	{
+		return (this->col == pointToCompareTo.col && this->row == pointToCompareTo.row);
+	}
+
     friend class Stack;
     friend class Maze;
 };

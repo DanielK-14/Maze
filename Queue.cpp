@@ -4,14 +4,14 @@ Queue::Queue(int size)  ///Size by user
 {
     head = 2;
     tail = 1;
-    data = new char[size + 1];
+    data = new Node[size + 1];
 }
 
-Queue::Queue()  ///Default size with out user input
+Queue::Queue() ///Default size with out user input
 {
     head = 1;
     tail = 0;
-    data = new char[2001];
+    data = new Node[2001];
 }
 
 Queue::~Queue()
@@ -35,32 +35,32 @@ int Queue::IsEmpty()
     return (AddOne(tail) == head);
 }
 
-Type Queue::Front()
+Node * Queue::Front()
 {
     if(IsEmpty())
     {
         cout << "Error: QUEUE EMPTY\n"; exit(1);
     }
-    return(data[head]);
+    return(&data[head]);
 }
 
-void Queue::EnQueue(Type item)
+void Queue::EnQueue(Node * item)
 {
     if(AddOne(AddOne(tail)) == head)
     {
         cout << "Error: QUEUE FULL\n"; exit(1);
     }
     tail = AddOne(tail);
-    data[tail] = item;
+    data[tail] = *item;
 }
 
-Type Queue::DeQueue()
+Node * Queue::DeQueue()
 {
     if(IsEmpty())
     {
         cout << "Error QUEUE EMPTY\n"; exit(1);
     }
-    Type item = data[head];
+    Node * item = &data[head];
     head = AddOne(head);
     return(item);
 }

@@ -17,7 +17,7 @@ private:
 public:
 	Stack()
 	{
-		top = nullptr;
+		top = NULL;
 	}
 	
 	~Stack()
@@ -29,12 +29,12 @@ public:
 	
 	int IsEmpty()
 	{
-		return top == nullptr;
+		return top == NULL;
 	}
 	
 	void Push(Point p)
 	{
-	    if(top == nullptr)
+	    if(top == NULL)
 		    top = new Node(p);
         else
         {

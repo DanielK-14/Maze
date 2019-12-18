@@ -2,16 +2,16 @@
 
 Queue::Queue(int size)  ///Size by user
 {
-    head = 2;
-    tail = 1;
-    data = new Node[size + 1];
+    head = 1;
+    tail = 0;
+    data = new Point[size/2 + 1];
 }
 
 Queue::Queue() ///Default size with out user input
 {
     head = 1;
     tail = 0;
-    data = new Node[2001];
+    data = new Point[MAX_SIZE];
 }
 
 Queue::~Queue()
@@ -35,32 +35,32 @@ int Queue::IsEmpty()
     return (AddOne(tail) == head);
 }
 
-Node * Queue::Front()
+Point Queue::Front()
 {
     if(IsEmpty())
     {
         cout << "Error: QUEUE EMPTY\n"; exit(1);
     }
-    return(&data[head]);
+    return(data[head]);
 }
 
-void Queue::EnQueue(Node * item)
+void Queue::EnQueue(const Point& point)
 {
     if(AddOne(AddOne(tail)) == head)
     {
         cout << "Error: QUEUE FULL\n"; exit(1);
     }
     tail = AddOne(tail);
-    data[tail] = *item;
+    data[tail] = point;
 }
 
-Node * Queue::DeQueue()
+Point Queue::DeQueue()
 {
     if(IsEmpty())
     {
         cout << "Error QUEUE EMPTY\n"; exit(1);
     }
-    Node * item = &data[head];
+    Point item = data[head];
     head = AddOne(head);
     return(item);
 }

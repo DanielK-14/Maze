@@ -5,8 +5,11 @@ CMakeFiles/MazeProject.dir/Maze.cpp.o: ../Maze.cpp
 CMakeFiles/MazeProject.dir/Maze.cpp.o: ../Maze.h
 CMakeFiles/MazeProject.dir/Maze.cpp.o: ../Node.h
 CMakeFiles/MazeProject.dir/Maze.cpp.o: ../Point.h
+CMakeFiles/MazeProject.dir/Maze.cpp.o: ../Queue.h
 CMakeFiles/MazeProject.dir/Maze.cpp.o: ../Stack.h
 
+CMakeFiles/MazeProject.dir/Queue.cpp.o: ../Node.h
+CMakeFiles/MazeProject.dir/Queue.cpp.o: ../Point.h
 CMakeFiles/MazeProject.dir/Queue.cpp.o: ../Queue.cpp
 CMakeFiles/MazeProject.dir/Queue.cpp.o: ../Queue.h
 

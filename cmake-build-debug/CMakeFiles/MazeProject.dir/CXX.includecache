@@ -6,6 +6,18 @@
 
 #IncludeRegexTransform: 
 
+/Volumes/My Drive/לימודים/GitHub/MazeProject/Maze.cpp
+Maze.h
+/Volumes/My Drive/לימודים/GitHub/MazeProject/Maze.h
+Point.h
+/Volumes/My Drive/לימודים/GitHub/MazeProject/Point.h
+Stack.h
+/Volumes/My Drive/לימודים/GitHub/MazeProject/Stack.h
+Queue.h
+/Volumes/My Drive/לימודים/GitHub/MazeProject/Queue.h
+stdlib.h
+-
+
 /Volumes/My Drive/לימודים/GitHub/MazeProject/Maze.h
 iostream
 -
@@ -13,10 +25,32 @@ string.h
 -
 Point.h
 /Volumes/My Drive/לימודים/GitHub/MazeProject/Point.h
+vector
+-
+
+/Volumes/My Drive/לימודים/GitHub/MazeProject/Node.h
+Point.h
+/Volumes/My Drive/לימודים/GitHub/MazeProject/Point.h
 
 /Volumes/My Drive/לימודים/GitHub/MazeProject/Point.h
 iostream
 -
+
+/Volumes/My Drive/לימודים/GitHub/MazeProject/Queue.h
+iostream
+-
+Node.h
+/Volumes/My Drive/לימודים/GitHub/MazeProject/Node.h
+Point.h
+/Volumes/My Drive/לימודים/GitHub/MazeProject/Point.h
+
+/Volumes/My Drive/לימודים/GitHub/MazeProject/Stack.h
+Node.h
+/Volumes/My Drive/לימודים/GitHub/MazeProject/Node.h
+iostream
+-
+Point.h
+/Volumes/My Drive/לימודים/GitHub/MazeProject/Point.h
 
 /Volumes/My Drive/לימודים/GitHub/MazeProject/main.cpp
 iostream

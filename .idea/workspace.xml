@@ -13,10 +13,23 @@
   <component name="ChangeListManager">
     <list default="true" id="aef88733-923f-484f-8efd-bd5f0d0697ee" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maze.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Maze.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maze.h" beforeDir="false" afterPath="$PROJECT_DIR$/Maze.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MazeSolver.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/MazeSolver.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MazeSolver.h" beforeDir="false" afterPath="$PROJECT_DIR$/MazeSolver.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Queue.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Queue.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MazeProject.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MazeProject.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MazeProject.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MazeProject.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Queue.h" beforeDir="false" afterPath="$PROJECT_DIR$/Queue.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MazeProject.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MazeProject.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MazeProject.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MazeProject.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MazeProject.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MazeProject.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MazeProject.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MazeProject.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MazeProject.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MazeProject.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/MazeProject" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/MazeProject" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/MazeProject.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/MazeProject.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -69,6 +82,9 @@
       <workItem from="1575578174660" duration="4600000" />
       <workItem from="1575669685792" duration="151000" />
       <workItem from="1576161711557" duration="12465000" />
+      <workItem from="1576513059165" duration="880000" />
+      <workItem from="1576513989077" duration="2000" />
+      <workItem from="1576661768347" duration="13116000" />
     </task>
     <task id="LOCAL-00001" summary="Daniel">
       <created>1575404317152</created>
@@ -98,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576172590282</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Merge branch 'master' of https://github.com/DanielK-14/MazeProject&#10;&#10;# Conflicts:&#10;#&#9;main.cpp">
+      <created>1576513399646</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1576513399646</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

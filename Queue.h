@@ -3,16 +3,18 @@
 
 #include <iostream>
 #include "Node.h"
+#include "Point.h"
+
 using namespace std;
 
-const int MAX_SIZE = 100;
+const int MAX_SIZE = 1001; // default max size in case maze 25x80 , 1 is to be letf empty
 
 class Queue
 {
 private:
     int head;
     int tail;
-    Node * data;
+    Point* data;
     static int AddOne(int x);
 
 public:
@@ -21,9 +23,9 @@ public:
     ~Queue();
     void MakeEmpty();
     int IsEmpty();
-    Node * Front();
-    void EnQueue(Node * item);
-    Node * DeQueue();
+    Point Front();
+    void EnQueue(const Point& point);
+    Point DeQueue();
 };
 
 

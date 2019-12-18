@@ -11,4 +11,5 @@ add_executable(MazeProject
                Stack.h
                Queue.h
                Queue.cpp
-               Point.h)
+               Point.h
+        )

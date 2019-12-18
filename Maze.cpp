@@ -1,6 +1,7 @@
 #include "Maze.h"
 #include "Point.h"
 #include "Stack.h"
+#include "Queue.h"
 #include <stdlib.h>
 
 Maze::Maze()
@@ -45,6 +46,7 @@ void Maze::MakeCleanMaze()
 
 void Maze::MakeMaze()
 {
+    MakeCleanMaze();
     Stack stack;
     stack.Push(Point(1,1));
     maze[1][1] = '$';
@@ -53,8 +55,8 @@ void Maze::MakeMaze()
     {
         Point p = stack.Pop();
         int movesAmount = 0;
-        Point* moves = getPosibleMoves(p,&movesAmount);
-        if(moves != NULL)
+        Point* moves = getPosibleMoves(p,&movesAmount,2);
+        if(moves != nullptr)
         {
             int rand_move = rand() % movesAmount+1;
             RemoveWalls(p,moves[rand_move-1]);
@@ -67,33 +69,33 @@ void Maze::MakeMaze()
     CleanDollars();
 }
 
-Point* Maze::getPosibleMoves(const Point& point,int* movesAmount)
+Point* Maze::getPosibleMoves(const Point& point,int* movesAmount, int val)
 {
-    Point* moves = new Point[4];
-    if(point.col + 2 <= cols-2 && maze[point.col+2][point.row] != '$')   ///Right
+    Point* moves = new Point[3];
+    if(point.col + val <= cols-val && maze[point.col+val][point.row] == ' ')   ///Right
     {
-        moves[*movesAmount] = Point(point.row , point.col+2);
+        moves[*movesAmount] = Point(point.row , point.col+val);
         (*movesAmount)++;
     }
-    if(point.row + 2 <= rows-2 && maze[point.col][point.row+2] != '$')   ///Down
+    if(point.row + val <= rows-val && maze[point.col][point.row+val] == ' ')   ///Down
     {
-        moves[*movesAmount] = Point(point.row + 2, point.col);
+        moves[*movesAmount] = Point(point.row + val, point.col);
         (*movesAmount)++;
     }
-    if(point.col - 2 >= 1 && maze[point.col-2][point.row] != '$')   ///Left
+    if(point.col - val >= 1 && maze[point.col-val][point.row] == ' ')   ///Left
     {
-        moves[*movesAmount] = Point(point.row , point.col-2);
+        moves[*movesAmount] = Point(point.row , point.col-val);
         (*movesAmount)++;
     }
-    if(point.row - 2 >= 1 && maze[point.col][point.row-2] != '$')   ///Up
+    if(point.row - val >= 1 && maze[point.col][point.row-val] == ' ')   ///Up
     {
-        moves[*movesAmount] = Point(point.row - 2, point.col);
+        moves[*movesAmount] = Point(point.row - val, point.col);
         (*movesAmount)++;
     }
-    if(*movesAmount < 4)
+    if(*movesAmount < 3)
     {
         if(*movesAmount == 0)
-            return NULL;
+            return nullptr;
         Point* movesNew = new Point[*movesAmount];
         for (int i = 0; i < *movesAmount; i++)
         {
@@ -103,30 +105,6 @@ Point* Maze::getPosibleMoves(const Point& point,int* movesAmount)
         return movesNew;
     }
     return moves;
-}
-
-vector<Point> Maze::GetPossibleMoves(const Point& point) {
-
-	vector<Point> moves;
- 
-	if (point.col + 1 <= cols - 1 && maze[point.col + 1][point.row] == ' ')   ///Right
-	{
-		moves.push_back(Point(point.row, point.col + 1));
-	}
-	if (point.row + 1 <= rows - 1 && maze[point.col][point.row + 1] == ' ')   ///Down
-	{
-		moves.push_back(Point(point.row + 1, point.col));
-	}
-	if (point.col - 1 >= 1 && maze[point.col - 1][point.row] == ' ')   ///Left
-	{
-		moves.push_back(Point(point.row, point.col - 1));
-	}
-	if (point.row - 1 >= 1 && maze[point.col][point.row - 1] == ' ')   ///Up
-	{
-		moves.push_back(Point(point.row - 1, point.col));
-	}
-	
-	return moves;
 }
 
 void Maze::RemoveWalls(const Point& loc, const Point& dest)
@@ -162,8 +140,54 @@ void Maze::Show()
     {
         for (int j = 0; j < cols; j++)
         {
-            cout << maze[j][i] << " ";
+            cout << maze[j][i];
         }
         cout << endl;
+    }
+}
+
+bool Maze::buildMazeWithRows(const char *row, int line)
+{
+    for (int i = 0; i < cols ; i++)
+    {
+        if(row[i] != ' ' && row[i] != '*')
+            return false;
+
+        if((line == rows-1 || line == 0) && row[i] != '*')
+            return false;
+
+        if((row[0] != '*' && line != 1) || (row[cols-1] != '*' && line != rows-2))
+            return false;
+
+        if((line == 1 && row[0] != ' ') || (line == rows-2 && row[cols-1] != ' '))
+            return false;
+
+        maze[i][line] = row[i];
+    }
+    return true;
+}
+
+void Maze::SolveMaze()
+{
+    Point end(rows-2,cols-1);
+    Point start(1,0);
+    Queue movesQueue(rows*cols);
+    movesQueue.EnQueue(start);
+
+    while(!movesQueue.IsEmpty())
+    {
+        Point point = movesQueue.DeQueue();
+        maze[point.col][point.row] = '$';
+
+        if(point == end)   ///Reached to the end of the maze
+            break;
+
+        else
+        {
+            int movesAmount = 0;
+            Point* moves = getPosibleMoves(point,&movesAmount,1);
+            for (int i = 0; i < movesAmount; i++)
+                movesQueue.EnQueue(moves[i]);
+        }
     }
 }
